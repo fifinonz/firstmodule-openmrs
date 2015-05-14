@@ -124,9 +124,21 @@ public class  FirstModuleManageController {
             return "redirect:manage";
         }
 
-        /*List<Patient>patientList=patientService.getAllPatients();*/
+
+
 
 
 	}
+
+    /* List all saved patients */
+
+    @RequestMapping(value = "/module/firstmodule/listPatients", method = RequestMethod.GET)
+    public String listPatients(ModelMap model) {
+        //model.addAttribute("user", Context.getAuthenticatedUser());
+        List<Patient>patientList=patientService.getAllPatients();
+        model.addAttribute("listPatient",patientList);
+
+        return ("saved");
+    }
 
 }

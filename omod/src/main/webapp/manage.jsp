@@ -4,6 +4,7 @@
 <%@ include file="template/localHeader.jsp"%>
 
 <p>New Patient</p>
+${save_success}
 <form style="border: groove" class="form" action="<c:url value='/module/firstmodule/saved.form' />" method="get">
 
     <label for="given_name">Given Name:</label>
@@ -21,7 +22,7 @@
     <br>
     <br>
     <label for="dob">Date of birth:</label>
-    <input format="yyyy-mm-dd" type="date" name="dob" id="dob" re
+    <input format="yyyy-mm-dd" type="date" name="dob" id="dob" required>
     <hr>
     <hr>
     <label for="gender">Gender:</label>
