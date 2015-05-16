@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module configVersion="1.2">
+
+	<!-- Module Properties -->
+	<id>firstmodule</id>
+	<name>First Module Module</name>
+	<version>1.0-SNAPSHOT</version>
+	<package>org.openmrs.module.firstmodule</package>
+	<author>Muthoni</author>
+	<description>
+		First attempt at developing openMRS modules, to add and list patients.
+	</description>
+	<updateURL>https://modules.openmrs.org/modules/download/firstmodule/update.rdf</updateURL>
+	<require_version>1.8.2</require_version>
+	<!-- / Module Properties -->
+
+	
+	<!-- Module Activator -->
+	<activator>org.openmrs.module.firstmodule.FirstModuleActivator</activator>
+	
+	
+	<!-- Adds link to admin page -->
+	<extension>
+		<point>org.openmrs.admin.list</point>
+		<class>org.openmrs.module.firstmodule.extension.html.AdminList</class>
+	</extension>
+	
+	<!-- Maps hibernate file's, if present -->
+	<mappingFiles>
+				
+		FirstModule.hbm.xml
+				
+	</mappingFiles>
+
+	<!-- Internationalization -->
+	<!-- All message codes should start with firstmodule. -->
+	<messages>
+		<lang>en</lang>
+		<file>messages.properties</file>
+	</messages>
+	<messages>
+		<lang>fr</lang>
+		<file>messages_fr.properties</file>
+	</messages>
+	<messages>
+		<lang>es</lang>
+		<file>messages_es.properties</file>
+	</messages>
+	<!-- /Internationalization -->
+
+</module>
+
