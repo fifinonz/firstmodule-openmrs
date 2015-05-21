@@ -4,7 +4,7 @@
 <%@ include file="template/localHeader.jsp"%>
 
 <p>New Patient</p>
-<form class="form" action="<c:url value='/module/firstmodule/submitForm.form' />" method="post">
+<form style="border: groove" class="form" action="<c:url value='/module/firstmodule/saved.form' />" method="get">
 
     <label for="given_name">Given Name:</label>
     <input type="text" name="given_name" id="given_name" required>
@@ -14,16 +14,23 @@
 
     <label for="family_name">Family Name:</label>
     <input type="text" name="family_name" id="family_name" required>
-
+    <br>
+    <br>
+    <label for="id_number">ID number:</label>
+    <input type="text" name="id_number" id="id_number" required>
+    <br>
+    <br>
     <label for="dob">Date of birth:</label>
-    <input type="date" name="dob" id="dob" required>
-
+    <input format="yyyy-mm-dd" type="date" name="dob" id="dob" re
+    <hr>
+    <hr>
     <label for="gender">Gender:</label>
     <select id="gender" name="gender" >
         <option value="M">Male</option>
         <option value="M">Female</option>
     </select>
-
+    <br>
+    <br>
     <label for="address">Address:</label>
     <input type="text" name="address" id="address" required>
 
@@ -35,7 +42,8 @@
 
     <label for="country">Country:</label>
     <input type="text" name="country" id="country" required>
-
+    <br>
+    <br>
     <button>Submit</button>
 
 </form>
