@@ -53,30 +53,6 @@ public class  FirstModuleManageController {
 
 	}
 
-	/*@RequestMapping(value = "/module/firstmodule/patientForm", method = RequestMethod.GET)
-	public void patientForm(ModelMap model) {
-
-
-		Patient patient =new Patient();
-		Person person=new Person();
-		PersonName personName=new PersonName();
-
-
-
-	}*/
-
-	/* @RequestMapping(value = "/module/firstmodule/getForm", method = RequestMethod.GET)
-	public String getForm(ModelMap model) {
-
-
-		Patient patient =new Patient();
-		Person person=new Person();
-		PersonName personName=new PersonName();
-
-		return "manage";
-
-
-	}*/
 
 	@RequestMapping(value = "/module/firstmodule/saveForm", method = RequestMethod.GET)
 	public String saveForm(ModelMap model,
